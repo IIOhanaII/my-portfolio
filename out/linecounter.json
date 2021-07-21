@@ -1,0 +1,268 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\Users\\arthu\\Desktop\\my-portfolio",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2021-07-21 19:13:29",
+            "filesum": 33,
+            "codesum": 25210,
+            "commentsum": 72,
+            "blanksum": 2283,
+            "statistics": {
+                ".json": {
+                    "code": 15316,
+                    "comment": 0,
+                    "blank": 3
+                },
+                ".js": {
+                    "code": 360,
+                    "comment": 4,
+                    "blank": 21
+                },
+                ".css": {
+                    "code": 124,
+                    "comment": 0,
+                    "blank": 19
+                },
+                ".txt": {
+                    "code": 3,
+                    "comment": 1,
+                    "blank": 0
+                },
+                ".html": {
+                    "code": 20,
+                    "comment": 23,
+                    "blank": 0
+                },
+                ".md": {
+                    "code": 38,
+                    "comment": 12,
+                    "blank": 32
+                },
+                "": {
+                    "code": 18,
+                    "comment": 1,
+                    "blank": 5
+                },
+                ".lock": {
+                    "code": 9331,
+                    "comment": 31,
+                    "blank": 2203
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 15246,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "filename": "public\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 20,
+                    "comment": 23,
+                    "filename": "public\\index.html"
+                },
+                {
+                    "filename": "public\\logo192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "public\\logo512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "public\\manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 1,
+                    "filename": "public\\robots.txt"
+                },
+                {
+                    "blank": 32,
+                    "code": 38,
+                    "comment": 12,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\App.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "src\\App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "src\\App.test.js"
+                },
+                {
+                    "filename": "src\\assets\\mixkit-daytime-city-traffic-aerial-view-56.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\mixkit-daytime-city-traffic-aerial-view-56.webm",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\my-timers-demo.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\my-timers-demo.webm",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\my-timers.PNG",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\stock-tracker-demo.mp4",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\stock-tracker-demo.webm",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "src\\assets\\stock-tracker.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "src\\components\\AboutComponent.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "src\\components\\ContactComponent.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\components\\MainComponent.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 147,
+                    "comment": 0,
+                    "filename": "src\\components\\PortfolioComponent.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 28,
+                    "comment": 0,
+                    "filename": "src\\components\\PortfolioModalComponent.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\components\\PresentationComponent.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 80,
+                    "comment": 0,
+                    "filename": "src\\components\\StackComponent.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 124,
+                    "comment": 0,
+                    "filename": "src\\index.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "src\\index.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\reportWebVitals.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 4,
+                    "filename": "src\\setupTests.js"
+                },
+                {
+                    "blank": 2203,
+                    "code": 9331,
+                    "comment": 31,
+                    "filename": "yarn.lock"
+                }
+            ]
+        }
+    ]
+}

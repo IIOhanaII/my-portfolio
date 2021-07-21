@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Main } from "./components/MainComponent";
+import "./App.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHtml5,
+  faCss3,
+  faSass,
+  faBootstrap,
+  faJs,
+  faReact,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChartLine,
+  faHourglassHalf,
+  faBriefcase,
+  faBroadcastTower,
+} from "@fortawesome/free-solid-svg-icons";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+library.add(fab, faHtml5, faCss3, faSass, faBootstrap, faJs, faReact, faGithub);
+library.add(fas, faChartLine, faHourglassHalf, faBriefcase, faBroadcastTower);
+
+export class App extends Component {
+  render() {
+    return <Main />;
+  }
 }
-
-export default App;
