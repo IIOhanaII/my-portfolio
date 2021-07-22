@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Modal, ModalBody } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const PortfolioModal = ({
+export const DesktopPortfolioModal = ({
   isModalOpen,
   toggle,
   modalVideoWebM,
@@ -44,7 +44,7 @@ export const PortfolioModal = ({
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-evenly",
+              justifyContent: "space-evenly"
             }}
           >
             <a href={modalSourceCodeLink} target="_blank" rel="noreferrer">

@@ -71,11 +71,15 @@ div[tabindex] > div {
   position: relative;
 }
 
+.row > * {
+  min-width: 80px;
+  max-width: 220px;
+}
+
 .portfolio-container {
   position: relative;
   background-color: #fff;
   height: 187px;
-  width: 384px;
   border-radius: 0.5rem;
 }
 
@@ -94,8 +98,8 @@ div[tabindex] > div {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 187px;
-  width: 220px;
+  height: 100%;
+  width: 100%;
   border-radius: 0.5rem;
   opacity: 0;
   transition: 0.5s ease;
@@ -127,10 +131,10 @@ div[tabindex] > .modal-dialog {
   .stacks-vertical-alignment {
     text-align: center;
   }
-  .icons-resizing {
+  .stack-icons-resizing {
     font-size: 3em;
   }
-  .icons-resizing-ts {
+  .stack-icons-resizing-ts {
     width: 42px;
     height: 48px;
   }
@@ -140,4 +144,31 @@ div[tabindex] > .modal-dialog {
   .react-icon-alignment {
     margin-left: calc(var(--bs-gutter-x) * 0.5);
   }
+}
+
+@media (max-width: 575px) {
+  .portfolio-icons-resizing {
+    font-size: 4.5em;
+  }
+  .portfolio-container {
+    height: 130px;
+  }  
+}
+
+@media (max-width: 375px) and (max-height: 700px) {
+  .portfolio-icons-resizing {
+    font-size: 3.5em;
+  }
+  .portfolio-container {
+    height: 80px;
+  } 
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .portfolio-icons-resizing {
+    font-size: 4em;
+  }
+  .portfolio-container {
+    height: 140px;
+  } 
 }
