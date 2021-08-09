@@ -76,6 +76,11 @@ div[tabindex] > div {
   max-width: 220px;
 }
 
+.portfolio {
+  font-family: "Roboto";
+  background-color: hsl(226, 82%, 63%);
+}
+
 .portfolio-container {
   position: relative;
   background-color: #fff;
@@ -127,6 +132,20 @@ div[tabindex] > .modal-dialog {
   object-fit: cover;
 }
 
+.about {
+  font-family: "Roboto";
+  background-color: hsl(283, 82%, 63%);
+}
+
+.contact {
+  font-family: "Roboto";
+  background-color: hsl(7, 82%, 63%);
+}
+
+.Toastify__toast-container .Toastify__toast--success {
+  background: #198754;
+}
+
 @media (max-width: 767px) and (max-height: 824px) {
   .stacks-vertical-alignment {
     text-align: center;
@@ -152,7 +171,7 @@ div[tabindex] > .modal-dialog {
   }
   .portfolio-container {
     height: 130px;
-  }  
+  }
 }
 
 @media (max-width: 375px) and (max-height: 700px) {
@@ -161,7 +180,7 @@ div[tabindex] > .modal-dialog {
   }
   .portfolio-container {
     height: 80px;
-  } 
+  }
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -170,5 +189,5 @@ div[tabindex] > .modal-dialog {
   }
   .portfolio-container {
     height: 140px;
-  } 
+  }
 }

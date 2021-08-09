@@ -49,7 +49,7 @@ export class PortfolioComponent extends Component {
 
   render() {
     return (
-      <div className="white-edges bg-primary d-flex flex-column justify-content-center">
+      <div className="white-edges d-flex flex-column justify-content-center portfolio">
         <h1
           className="text-light text-center mb-5"
           style={{ fontFamily: "Roboto" }}
@@ -140,16 +140,16 @@ export class PortfolioComponent extends Component {
                     />
                   </Button>
                   <MobilePortfolioModal
-                      isModalOpen={this.state.modal}
-                      toggle={this.toggleModal}
-                      modalVideoWebM={this.state.modalAppVideoWebM}
-                      modalVideoMp4={this.state.modalAppVideoMp4}
-                      modalTitle={this.state.modalAppTitle}
-                      modalStack={this.state.modalAppStack}
-                      modalDescription={this.state.modalAppDescription}
-                      modalSourceCodeLink={this.state.modalAppSourceCodeLink}
-                      modalLiveLink={this.state.modalAppLiveLink}
-                    />
+                    isModalOpen={this.state.modal}
+                    toggle={this.toggleModal}
+                    modalVideoWebM={this.state.modalAppVideoWebM}
+                    modalVideoMp4={this.state.modalAppVideoMp4}
+                    modalTitle={this.state.modalAppTitle}
+                    modalStack={this.state.modalAppStack}
+                    modalDescription={this.state.modalAppDescription}
+                    modalSourceCodeLink={this.state.modalAppSourceCodeLink}
+                    modalLiveLink={this.state.modalAppLiveLink}
+                  />
                 </React.Fragment>
               )}
             </Col>
@@ -277,13 +277,13 @@ export class PortfolioComponent extends Component {
                         "https://iiohanaii.github.io/my-timers/"
                       )
                     }
-                >
+                  >
                     {" "}
                     <FontAwesomeIcon
-                    icon={["fas", "briefcase"]}
-                    size="6x"
-                    color="#dc3545"
-                    className="icon-position portfolio-icons-resizing"
+                      icon={["fas", "briefcase"]}
+                      size="6x"
+                      color="#dc3545"
+                      className="icon-position portfolio-icons-resizing"
                     />
                   </Button>
                 </React.Fragment>
