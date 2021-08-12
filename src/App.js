@@ -11,6 +11,9 @@ import {
   faJs,
   faReact,
   faGithub,
+  faGithubSquare,
+  faLinkedin,
+  faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -19,16 +22,30 @@ import {
   faBriefcase,
   faBroadcastTower,
   faDownload,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faHtml5, faCss3, faSass, faBootstrap, faJs, faReact, faGithub);
+library.add(
+  fab,
+  faHtml5,
+  faCss3,
+  faSass,
+  faBootstrap,
+  faJs,
+  faReact,
+  faGithub,
+  faGithubSquare,
+  faLinkedin,
+  faTwitterSquare
+);
 library.add(
   fas,
   faChartLine,
   faHourglassHalf,
   faBriefcase,
   faBroadcastTower,
-  faDownload
+  faDownload,
+  faPlus
 );
 
 export const App = () => <Main />;

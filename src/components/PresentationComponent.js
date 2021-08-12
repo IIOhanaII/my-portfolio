@@ -2,8 +2,9 @@ import React from "react";
 import { Button } from "reactstrap";
 import presentationVideoWebM from "../assets/mixkit-daytime-city-traffic-aerial-view-56.webm";
 import presentationVideoMp4 from "../assets/mixkit-daytime-city-traffic-aerial-view-56.mp4";
+import { PORTFOLIO_PAGE_POSITION } from "../constants/index";
 
-export const PresentationComponent = () => {
+export const PresentationComponent = ({ handlePageChange }) => {
   return (
     <React.Fragment>
       <video autoPlay muted loop id="myPresentationVideo">
@@ -13,13 +14,13 @@ export const PresentationComponent = () => {
       </video>
 
       <div className="teaser">
-        <h1>Bonjour !</h1>
-        <h1>Je suis Arthur Barbey, développeur front end React</h1>
+        <h4>Bonjour !</h4>
+        <h4>Je suis Arthur Barbey, développeur front end React</h4>
         <Button
           outline
           color="warning"
           size="lg"
-          style={{ fontSize: "1.5rem" }}
+          onClick={() => handlePageChange(PORTFOLIO_PAGE_POSITION)}
         >
           Mes travaux
         </Button>
