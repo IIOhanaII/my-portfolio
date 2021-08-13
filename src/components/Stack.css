@@ -1,0 +1,26 @@
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .react-icon-alignment {
+    margin-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+}
+
+@media (min-width: 768px) {
+  .row > .stack-container {
+    min-width: 5rem;
+    max-width: 13.75rem;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 824px) {
+  .stacks-vertical-alignment {
+    text-align: center;
+  }
+  .stacks-icons-resizing {
+    font-size: 3rem;
+  }
+  .stack-icon-resizing-ts {
+    width: 2.625rem;
+    height: 3rem;
+  }
+}

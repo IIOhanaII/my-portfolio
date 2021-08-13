@@ -1,0 +1,33 @@
+.component {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.white-edges-component {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.stack-component {
+  font-family: "Roboto";
+  background-color: #219ebc;
+}
+
+.portfolio-component {
+  font-family: "Roboto";
+  background-color: #fb8500;
+}
+
+.about-component {
+  background-color: #023047;
+}
+
+.contact-component {
+  background-color: #219ebc;
+}

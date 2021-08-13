@@ -1,0 +1,29 @@
+.presentation-content-position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#presentation-video {
+  width: 95%;
+  height: 90%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#presentation-text {
+  width: 50%;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+#presentation-text .btn {
+  color: hsl(38, 82%, 63%);
+  border-color: hsl(38, 82%, 63%);
+}
+
+#presentation-text .btn:hover {
+  color: black;
+  background-color: hsl(38, 82%, 63%);
+}

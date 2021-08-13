@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import "./Main.css";
 import ReactPageScroller from "react-page-scroller";
-import { PresentationComponent } from "../components/PresentationComponent";
-import { PortfolioComponent } from "../components/PortfolioComponent";
-import { StackComponent } from "../components/StackComponent";
-import { AboutComponent } from "../components/AboutComponent";
-import { ContactComponent } from "../components/ContactComponent";
+import { Presentation } from "./Presentation";
+import { Portfolio } from "./Portfolio";
+import { Stack } from "./Stack";
+import { About } from "./About";
+import { Contact } from "./Contact";
 
 export const Main = () => {
   const [currentPage, setCurrentPage] = useState(null);
@@ -25,14 +26,14 @@ export const Main = () => {
       blockScrollUp={blockScrollUp}
       blockScrollDown={blockScrollDown}
     >
-      <PresentationComponent handlePageChange={handlePageChange} />
-      <StackComponent />
-      <PortfolioComponent
+      <Presentation handlePageChange={handlePageChange} />
+      <Stack />
+      <Portfolio
         handleScrollUp={handleScrollUp}
         handleScrollDown={handleScrollDown}
       />
-      <AboutComponent />
-      <ContactComponent />
+      <About />
+      <Contact />
     </ReactPageScroller>
   );
 };
