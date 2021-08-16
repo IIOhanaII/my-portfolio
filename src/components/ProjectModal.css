@@ -16,7 +16,7 @@
   .project-description--portfolio {
     max-width: 400px;
   }
-  .modal-content .modal--portfolio {
+  .modal-content .project-modal--portfolio {
     flex-direction: row !important;
   }
 }
@@ -26,8 +26,8 @@
     width: 800px;
     height: 400px;
   }
-  .modal--stock,
-  .modal--timers {
+  .project-modal--stock,
+  .project-modal--timers {
     height: 400px;
   }
   .project-description {
@@ -43,7 +43,7 @@
   .project-description--portfolio {
     max-width: 840px;
   }
-  .modal--portfolio {
+  .project-modal--portfolio {
     height: 560px;
   }
 }
@@ -57,10 +57,10 @@
     width: 850px;
     height: 350px;
   }
-  .modal--stock {
+  .project-modal--stock {
     height: 560px;
   }
-  .modal--timers {
+  .project-modal--timers {
     height: 530px;
   }
   .project-description {

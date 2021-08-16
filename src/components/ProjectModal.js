@@ -1,31 +1,27 @@
 import React from "react";
-import "./PortfolioModal.css";
+import "./ProjectModal.css";
 import { Button, Modal, ModalBody } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 let classNames = require("classnames");
 
-export const PortfolioModal = ({
+export const ProjectModal = ({
   isModalOpen,
   toggle,
   modalVideoWebM,
   modalVideoMp4,
-  modalTitle,
-  modalStack,
-  modalDescription,
-  modalSourceCodeLink,
-  modalLiveLink,
+  modalDetails,
 }) => {
   // Adapt some of the modal classes in function of the project which has been clicked within the portfolio
   let modalClass = classNames("p-0 d-flex flex-column", {
-    "flex-xl-row modal--stock": modalTitle === "Stock Tracker",
-    "flex-xl-row modal--timers": modalTitle === "My Timers",
-    "modal--portfolio": modalTitle === "My Portfolio",
+    "flex-xl-row project-modal--stock": modalDetails.title === "Stock Tracker",
+    "flex-xl-row project-modal--timers": modalDetails.title === "My Timers",
+    "project-modal--portfolio": modalDetails.title === "My Portfolio",
   });
-  let modalDescriptionClass = classNames(
+  let modalDetailsClass = classNames(
     "d-flex flex-column justify-content-evenly p-3",
     {
-      "project-description p-xl-5": modalTitle !== "My Portfolio",
-      "project-description--portfolio": modalTitle === "My Portfolio",
+      "project-description p-xl-5": modalDetails.title !== "My Portfolio",
+      "project-description--portfolio": modalDetails.title === "My Portfolio",
     }
   );
 
@@ -37,7 +33,7 @@ export const PortfolioModal = ({
           muted
           loop
           className={
-            modalTitle === "My Portfolio"
+            modalDetails.title === "My Portfolio"
               ? "project-video--portfolio"
               : "project-video"
           }
@@ -46,12 +42,16 @@ export const PortfolioModal = ({
           <source src={modalVideoMp4} type="video/mp4" />
           Sorry, your browser doesn't support embedded videos.
         </video>
-        <div className={modalDescriptionClass}>
-          <h2 className="text-primary">{modalTitle}</h2>
-          <h6 className="text-secondary">{modalStack}</h6>
-          <p>{modalDescription}</p>
+        <div className={modalDetailsClass}>
+          <h2 className="text-primary">{modalDetails.title}</h2>
+          <h6 className="text-secondary">{modalDetails.stacks}</h6>
+          <p>{modalDetails.description}</p>
           <div className="d-flex justify-content-evenly">
-            <a href={modalSourceCodeLink} target="_blank" rel="noreferrer">
+            <a
+              href={modalDetails.sourceCodeLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button color="primary" size="md" className="d-inline">
                 <FontAwesomeIcon
                   icon={["fab", "github"]}
@@ -61,8 +61,8 @@ export const PortfolioModal = ({
                 {"  "} Code source
               </Button>
             </a>
-            {modalTitle !== "My Portfolio" && (
-              <a href={modalLiveLink} target="_blank" rel="noreferrer">
+            {modalDetails.title !== "My Portfolio" && (
+              <a href={modalDetails.liveLink} target="_blank" rel="noreferrer">
                 <Button color="primary" size="md">
                   <FontAwesomeIcon
                     icon={["fas", "broadcast-tower"]}

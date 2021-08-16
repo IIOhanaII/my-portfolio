@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./Portfolio.css";
-import { Container, Row, Col, Button } from "reactstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { PortfolioModal } from "./PortfolioModal";
+import { Container, Row, Col } from "reactstrap";
+import { ProjectButton } from "./ProjectButton";
+import { ProjectModal } from "./ProjectModal";
+import {
+  STOCK_TRACKER_PROJECT_DETAILS as stockTrackerProject,
+  MY_TIMERS_PROJECT_DETAILS as myTimersProject,
+  MY_PORTFOLIO_PROJECT_DETAILS as myPortfolioProject,
+} from "../constants/index";
 import stockTrackerDemoWebM from "../assets/stock-tracker-demo.webm";
 import myTimersDemoWebM from "../assets/my-timers-demo.webm";
 import myPortfolioDemoWebM from "../assets/my-portfolio-demo.webm";
@@ -12,33 +17,34 @@ import myPortfolioDemoMp4 from "../assets/my-portfolio-demo.mp4";
 var he = require("he");
 
 export const Portfolio = ({ handleScrollUp, handleScrollDown }) => {
-  const [modal, setModal] = useState(false);
-  const [modalAppVideoWebM, setModalAppVideoWebM] = useState(null);
-  const [modalAppVideoMp4, setModalAppVideoMp4] = useState(null);
-  const [modalAppTitle, setModalAppTitle] = useState("");
-  const [modalAppStack, setModalAppStack] = useState("");
-  const [modalAppDescription, setModalAppDescription] = useState("");
-  const [modalAppSourceCodeLink, setModalAppSourceCodeLink] = useState("");
-  const [modalAppLiveLink, setModalAppLiveLink] = useState("");
+  const [projectModal, setProjectModal] = useState(false);
+  const [projectModalVideoWebM, setProjectModalVideoWebM] = useState(null);
+  const [projectModalVideoMp4, setProjectModalVideoMp4] = useState(null);
+  const [projectModalDetails, setProjectModalDetails] = useState({
+    title: "",
+    stacks: "",
+    description: "",
+    sourceCodeLink: "",
+    liveLink: "",
+  });
 
   const toggleModal = (
-    appVideoWebM,
-    appVideoMp4,
-    appTitle,
-    appStack,
-    appDescription,
-    appSourceCodeLink,
-    appLiveLink
+    projectModalVideoWebM,
+    projectModalVideoMp4,
+    projectModalDetails
   ) => {
-    setModal(!modal);
-    if (!modal) {
-      setModalAppVideoWebM(appVideoWebM);
-      setModalAppVideoMp4(appVideoMp4);
-      setModalAppTitle(appTitle);
-      setModalAppStack(appStack);
-      setModalAppDescription(appDescription);
-      setModalAppSourceCodeLink(appSourceCodeLink);
-      setModalAppLiveLink(appLiveLink);
+    setProjectModal(!projectModal);
+    if (!projectModal) {
+      setProjectModalVideoWebM(projectModalVideoWebM);
+      setProjectModalVideoMp4(projectModalVideoMp4);
+      setProjectModalDetails((prevState) => ({
+        ...prevState,
+        title: projectModalDetails.title,
+        stacks: he.decode(projectModalDetails.stacks),
+        description: projectModalDetails.description,
+        sourceCodeLink: projectModalDetails.sourceCodeLink,
+        liveLink: projectModalDetails.liveLink,
+      }));
     }
     handleScrollUp();
     handleScrollDown();
@@ -51,245 +57,44 @@ export const Portfolio = ({ handleScrollUp, handleScrollDown }) => {
         <Container className="themed-container" fluid={true}>
           <Row className="justify-content-center flex-column flex-sm-row align-items-center">
             <Col sm="1" className="project-container mb-5 mb-sm-0 p-0">
-              {/* Render this on Desktop */}
-              {window.screen.width > 1024 && (
-                <React.Fragment>
-                  <FontAwesomeIcon
-                    icon={["fas", "chart-line"]}
-                    size="3x"
-                    color="#219ebc"
-                    className="project-container__elements project-container__elements--icon"
-                  />{" "}
-                  <div
-                    className="project-container__elements project-container__elements--overlay"
-                    style={{ backgroundColor: "#219ebc" }}
-                  >
-                    <Button
-                      size="md"
-                      style={{ backgroundColor: "#219ebc" }}
-                      className="project-container__elements project-container__elements--button"
-                      onClick={() =>
-                        toggleModal(
-                          stockTrackerDemoWebM,
-                          stockTrackerDemoMp4,
-                          "Stock Tracker",
-                          he.decode(
-                            "React &bull; web API &bull; Autocomplétion &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Git &bull; Github &bull; Github Pages"
-                          ),
-                          "Application qui restitue, dans un intervalle de temps défini, le cours de l'action américaine souhaité par l'utilisateur",
-                          "https://github.com/IIOhanaII/stock-tracker",
-                          "https://iiohanaii.github.io/stock-tracker/"
-                        )
-                      }
-                    >
-                      <FontAwesomeIcon
-                        icon={["fas", "plus"]}
-                        size="3x"
-                        color="#fff"
-                        className="project-container__elements project-container__elements--icon"
-                      />
-                    </Button>
-                    <PortfolioModal
-                      isModalOpen={modal}
-                      toggle={toggleModal}
-                      modalVideoWebM={modalAppVideoWebM}
-                      modalVideoMp4={modalAppVideoMp4}
-                      modalTitle={modalAppTitle}
-                      modalStack={modalAppStack}
-                      modalDescription={modalAppDescription}
-                      modalSourceCodeLink={modalAppSourceCodeLink}
-                      modalLiveLink={modalAppLiveLink}
-                    />
-                  </div>
-                </React.Fragment>
-              )}
-              {/* Render this on Mobile */}
-              {window.screen.width <= 1024 && (
-                <React.Fragment>
-                  <Button
-                    color="link"
-                    style={{ width: "100%", height: "100%" }}
-                    className="p-0"
-                    onClick={() =>
-                      toggleModal(
-                        stockTrackerDemoWebM,
-                        stockTrackerDemoMp4,
-                        "Stock Tracker",
-                        he.decode(
-                          "React &bull; web API &bull; Autocomplétion &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Git &bull; Github &bull; Github Pages"
-                        ),
-                        "Application qui restitue, dans un intervalle de temps défini, le cours de l'action américaine souhaité par l'utilisateur",
-                        "https://github.com/IIOhanaII/stock-tracker",
-                        "https://iiohanaii.github.io/stock-tracker/"
-                      )
-                    }
-                  >
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={["fas", "chart-line"]}
-                      size="3x"
-                      color="#219ebc"
-                      className="project-container__elements project-container__elements--icon"
-                    />
-                  </Button>
-                  <PortfolioModal
-                    isModalOpen={modal}
-                    toggle={toggleModal}
-                    modalVideoWebM={modalAppVideoWebM}
-                    modalVideoMp4={modalAppVideoMp4}
-                    modalTitle={modalAppTitle}
-                    modalStack={modalAppStack}
-                    modalDescription={modalAppDescription}
-                    modalSourceCodeLink={modalAppSourceCodeLink}
-                    modalLiveLink={modalAppLiveLink}
-                  />
-                </React.Fragment>
-              )}
+              <ProjectButton
+                projectIconName={"chart-line"}
+                toggleModal={toggleModal}
+                projectVideoWebM={stockTrackerDemoWebM}
+                projectVideoMp4={stockTrackerDemoMp4}
+                projectDetails={stockTrackerProject}
+              />
+              <ProjectModal
+                isModalOpen={projectModal}
+                toggle={toggleModal}
+                modalVideoWebM={projectModalVideoWebM}
+                modalVideoMp4={projectModalVideoMp4}
+                modalDetails={projectModalDetails}
+              />
             </Col>
             <Col
               sm={{ size: "1", offset: 1 }}
               className="project-container mb-5 mb-sm-0"
             >
-              {window.screen.width > 1024 && (
-                <React.Fragment>
-                  <FontAwesomeIcon
-                    icon={["fas", "hourglass-half"]}
-                    size="3x"
-                    color="#219ebc"
-                    className="project-container__elements project-container__elements--icon"
-                  />
-                  <div className="project-container__elements project-container__elements--overlay">
-                    <Button
-                      size="md"
-                      style={{ backgroundColor: "#219ebc" }}
-                      className="project-container__elements project-container__elements--button"
-                      onClick={() =>
-                        toggleModal(
-                          myTimersDemoWebM,
-                          myTimersDemoMp4,
-                          "My Timers",
-                          he.decode(
-                            "React &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Git &bull; Github &bull; Github Pages"
-                          ),
-                          "Application qui permet de gérer plusieurs minuteries",
-                          "https://github.com/IIOhanaII/my-timers",
-                          "https://iiohanaii.github.io/my-timers/"
-                        )
-                      }
-                    >
-                      <FontAwesomeIcon
-                        icon={["fas", "plus"]}
-                        size="3x"
-                        color="#fff"
-                        className="project-container__elements project-container__elements--icon"
-                      />
-                    </Button>
-                  </div>
-                </React.Fragment>
-              )}
-              {window.screen.width <= 1024 && (
-                <React.Fragment>
-                  <Button
-                    color="link"
-                    style={{ width: "100%", height: "100%" }}
-                    className="p-0"
-                    onClick={() =>
-                      toggleModal(
-                        myTimersDemoWebM,
-                        myTimersDemoMp4,
-                        "My Timers",
-                        he.decode(
-                          "React &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Git &bull; Github &bull; Github Pages"
-                        ),
-                        "Application qui permet de gérer plusieurs minuteries",
-                        "https://github.com/IIOhanaII/my-timers",
-                        "https://iiohanaii.github.io/my-timers/"
-                      )
-                    }
-                  >
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={["fas", "hourglass-half"]}
-                      size="3x"
-                      color="#219ebc"
-                      className="project-container__elements project-container__elements--icon"
-                    />
-                  </Button>
-                </React.Fragment>
-              )}
+              <ProjectButton
+                projectIconName={"hourglass-half"}
+                toggleModal={toggleModal}
+                projectVideoWebM={myTimersDemoWebM}
+                projectVideoMp4={myTimersDemoMp4}
+                projectDetails={myTimersProject}
+              />
             </Col>
-
             <Col
               sm={{ size: "1", offset: 1 }}
               className="project-container mb-5 mb-sm-0"
             >
-              {window.screen.width > 1024 && (
-                <React.Fragment>
-                  <FontAwesomeIcon
-                    icon={["fas", "briefcase"]}
-                    size="3x"
-                    color="#219ebc"
-                    className="project-container__elements project-container__elements--icon"
-                  />
-                  <div className="project-container__elements project-container__elements--overlay">
-                    <Button
-                      size="md"
-                      style={{ backgroundColor: "#219ebc" }}
-                      className="project-container__elements project-container__elements--button"
-                      onClick={() =>
-                        toggleModal(
-                          myPortfolioDemoWebM,
-                          myPortfolioDemoMp4,
-                          "My Portfolio",
-                          he.decode(
-                            "React &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Formik &bull; Git &bull; Github &bull; Github Pages"
-                          ),
-                          "Il s'agit du site sur lequel vous vous trouvez actuellement, ce site sert notamment à vous présenter mes réalisations",
-                          "https://github.com/IIOhanaII/my-portfolio",
-                          ""
-                        )
-                      }
-                    >
-                      <FontAwesomeIcon
-                        icon={["fas", "plus"]}
-                        size="3x"
-                        color="#fff"
-                        className="project-container__elements project-container__elements--icon"
-                      />
-                    </Button>
-                  </div>
-                </React.Fragment>
-              )}
-              {window.screen.width <= 1024 && (
-                <React.Fragment>
-                  <Button
-                    color="link"
-                    style={{ width: "100%", height: "100%" }}
-                    className="p-0"
-                    onClick={() =>
-                      toggleModal(
-                        myPortfolioDemoWebM,
-                        myPortfolioDemoMp4,
-                        "My Portfolio",
-                        he.decode(
-                          "React &bull; Reactstrap &bull; Bootstrap &bull; CSS &bull; Formik &bull; Git &bull; Github &bull; Github Pages"
-                        ),
-                        "Il s'agit du site sur lequel vous vous trouvez actuellement, ce site sert notamment à vous présenter mes réalisations",
-                        "https://github.com/IIOhanaII/my-portfolio",
-                        ""
-                      )
-                    }
-                  >
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={["fas", "briefcase"]}
-                      size="3x"
-                      color="#219ebc"
-                      className="project-container__elements project-container__elements--icon"
-                    />
-                  </Button>
-                </React.Fragment>
-              )}
+              <ProjectButton
+                projectIconName={"briefcase"}
+                toggleModal={toggleModal}
+                projectVideoWebM={myPortfolioDemoWebM}
+                projectVideoMp4={myPortfolioDemoMp4}
+                projectDetails={myPortfolioProject}
+              />
             </Col>
           </Row>
         </Container>

@@ -11,7 +11,7 @@ import {
   Input,
 } from "reactstrap";
 import emailjs from "emailjs-com";
-import { Formik } from "formik";
+import { Formik, ErrorMessage } from "formik";
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -136,8 +136,6 @@ export const Contact = () => {
           >
             {({
               values,
-              errors,
-              touched,
               handleChange,
               handleBlur,
               handleSubmit,
@@ -147,7 +145,7 @@ export const Contact = () => {
                 <FormGroup row className="mb-sm-3">
                   <Label
                     for="email"
-                    sm={{ size: "1", offset: 1 }}
+                    sm="2"
                     lg={{ size: "1", offset: 3 }}
                     className="text-start"
                   >
@@ -162,17 +160,17 @@ export const Contact = () => {
                       onBlur={handleBlur}
                       value={values.email}
                     />
-                    {errors.email && touched.email ? (
-                      <span style={{ color: "#fb8500", fontSize: "0.9rem" }}>
-                        {errors.email}
-                      </span>
-                    ) : null}
+                    <ErrorMessage
+                      component="span"
+                      style={{ color: "#fb8500", fontSize: "0.9rem" }}
+                      name="email"
+                    />
                   </Col>
                 </FormGroup>
                 <FormGroup row className="mb-sm-3">
                   <Label
                     for="subject"
-                    sm={{ size: "1", offset: 1 }}
+                    sm="2"
                     lg={{ size: "1", offset: 3 }}
                     className="text-start"
                   >
@@ -187,17 +185,17 @@ export const Contact = () => {
                       onBlur={handleBlur}
                       value={values.subject}
                     />
-                    {errors.subject && touched.subject ? (
-                      <span style={{ color: "#fb8500", fontSize: "0.9rem" }}>
-                        {errors.subject}
-                      </span>
-                    ) : null}
+                    <ErrorMessage
+                      component="span"
+                      style={{ color: "#fb8500", fontSize: "0.9rem" }}
+                      name="subject"
+                    />
                   </Col>
                 </FormGroup>
                 <FormGroup row>
                   <Label
                     for="message"
-                    sm={{ size: "1", offset: 1 }}
+                    sm="2"
                     lg={{ size: "1", offset: 3 }}
                     className="text-start"
                   >
@@ -214,11 +212,11 @@ export const Contact = () => {
                       onBlur={handleBlur}
                       value={values.message}
                     />
-                    {errors.message && touched.message ? (
-                      <span style={{ color: "#fb8500", fontSize: "0.9rem" }}>
-                        {errors.message}
-                      </span>
-                    ) : null}
+                    <ErrorMessage
+                      component="span"
+                      style={{ color: "#fb8500", fontSize: "0.9rem" }}
+                      name="message"
+                    />
                   </Col>
                 </FormGroup>
                 <FormGroup row className="text-center mt-3 mt-sm-4">

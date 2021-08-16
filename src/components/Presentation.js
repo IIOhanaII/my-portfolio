@@ -3,7 +3,7 @@ import "./Presentation.css";
 import { Button } from "reactstrap";
 import presentationVideoWebM from "../assets/mixkit-daytime-city-traffic-aerial-view-56.webm";
 import presentationVideoMp4 from "../assets/mixkit-daytime-city-traffic-aerial-view-56.mp4";
-import { PORTFOLIO_PAGE_POSITION } from "../constants/index";
+import { PORTFOLIO_PAGE_POSITION as portfolioPagePosition } from "../constants/index";
 
 export const Presentation = ({ handlePageChange }) => {
   return (
@@ -25,7 +25,7 @@ export const Presentation = ({ handlePageChange }) => {
         <Button
           outline
           size="lg"
-          onClick={() => handlePageChange(PORTFOLIO_PAGE_POSITION)}
+          onClick={() => handlePageChange(portfolioPagePosition)}
         >
           Mes travaux
         </Button>
