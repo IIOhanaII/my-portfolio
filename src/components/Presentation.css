@@ -1,29 +1,29 @@
-.presentation-content-position {
+.presentation-content {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-#presentation-video {
+.presentation-content--video {
   width: 95%;
   height: 90%;
   object-fit: cover;
   z-index: -1;
 }
 
-#presentation-text {
+.presentation-content--text {
   width: 50%;
   text-align: center;
   color: #f1f1f1;
 }
 
-#presentation-text .btn {
+.presentation-content--text .btn {
   color: hsl(38, 82%, 63%);
   border-color: hsl(38, 82%, 63%);
 }
 
-#presentation-text .btn:hover {
+.presentation-content--text .btn:hover {
   color: black;
   background-color: hsl(38, 82%, 63%);
 }

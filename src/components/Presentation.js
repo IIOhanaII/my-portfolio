@@ -12,15 +12,14 @@ export const Presentation = ({ handlePageChange }) => {
         autoPlay
         muted
         loop
-        id="presentation-video"
-        className="presentation-content-position"
+        className="presentation-content presentation-content--video"
       >
         <source src={presentationVideoWebM} type="video/webm" />
         <source src={presentationVideoMp4} type="video/mp4" />
         Sorry, your browser doesn't support embedded videos.
       </video>
 
-      <div id="presentation-text" className="presentation-content-position">
+      <div className="presentation-content presentation-content--text">
         <h4>Bonjour !</h4>
         <h4>Je suis Arthur Barbey, développeur front end React</h4>
         <Button

@@ -46,7 +46,7 @@ export const Portfolio = ({ handleScrollUp, handleScrollDown }) => {
 
   return (
     <div className="component">
-      <div className="white-edges-component portfolio-component d-flex flex-column justify-content-center">
+      <div className="smaller-component smaller-component--portfolio d-flex flex-column justify-content-center">
         <h3 className="text-light text-center mb-5">Mes Projets</h3>
         <Container className="themed-container" fluid={true}>
           <Row className="justify-content-center flex-column flex-sm-row align-items-center">

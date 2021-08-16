@@ -17,16 +17,15 @@ export const PortfolioModal = ({
 }) => {
   // Adapt some of the modal classes in function of the project which has been clicked within the portfolio
   let modalClass = classNames("p-0 d-flex flex-column", {
-    "flex-xl-row modal-height--stock": modalTitle === "Stock Tracker",
-    "flex-xl-row modal-height--timers": modalTitle === "My Timers",
-    "modal-flex--portfolio modal-height--portfolio":
-      modalTitle === "My Portfolio",
+    "flex-xl-row modal--stock": modalTitle === "Stock Tracker",
+    "flex-xl-row modal--timers": modalTitle === "My Timers",
+    "modal--portfolio": modalTitle === "My Portfolio",
   });
   let modalDescriptionClass = classNames(
     "d-flex flex-column justify-content-evenly p-3",
     {
-      "description-width p-xl-5": modalTitle !== "My Portfolio",
-      "description-width--portfolio": modalTitle === "My Portfolio",
+      "project-description p-xl-5": modalTitle !== "My Portfolio",
+      "project-description--portfolio": modalTitle === "My Portfolio",
     }
   );
 

@@ -48,7 +48,7 @@ export const Contact = () => {
 
   return (
     <div className="component">
-      <div className="white-edges-component contact-component d-flex flex-column justify-content-center text-light">
+      <div className="smaller-component smaller-component--contact d-flex flex-column justify-content-center text-light">
         <h3
           className="mb-4 mb-sm-5 text-center"
           style={{ fontFamily: "Roboto" }}

@@ -1,6 +1,6 @@
 /* MEDIA QUERIES */
 @media (min-width: 992px) {
-  .react-icon-alignment {
+  .stack-icon--react {
     margin-left: calc(var(--bs-gutter-x) * 0.5);
   }
 }
@@ -13,13 +13,13 @@
 }
 
 @media (max-width: 767px) and (max-height: 824px) {
-  .stacks-vertical-alignment {
+  .stacks-container {
     text-align: center;
   }
-  .stacks-icons-resizing {
+  .stack-icon {
     font-size: 3rem;
   }
-  .stack-icon-resizing-ts {
+  .stack-icon--ts {
     width: 2.625rem;
     height: 3rem;
   }

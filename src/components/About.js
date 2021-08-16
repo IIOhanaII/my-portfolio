@@ -7,14 +7,14 @@ import CV from "../assets/CV-Arthur-Barbey.pdf";
 export const About = () => {
   return (
     <div className="component">
-      <div className="white-edges-component about-component d-flex flex-column justify-content-center text-light text-center">
+      <div className="smaller-component smaller-component--about d-flex flex-column justify-content-center text-light text-center">
         <h3 className="mb-5" style={{ fontFamily: "Roboto" }}>
           À propos de moi
         </h3>
         <Container>
           <Row>
             <Col md={{ size: "10", offset: 1 }}>
-              <p className="about-description-font-size">
+              <p className="about-description">
                 Suite à 4 années en tant que Business Analyst spécialisé en
                 systèmes d’informations, j’élargis le champ de mes compétences
                 avec le développement front-end.
@@ -23,7 +23,7 @@ export const About = () => {
           </Row>
           <Row>
             <Col md={{ size: "10", offset: 1 }}>
-              <p className="about-description-font-size">
+              <p className="about-description">
                 Ce sont ces expériences en gestion d’applications financières
                 internationales qui auront fait grandir en moi l’envie de bâtir
                 des applications web.
@@ -32,7 +32,7 @@ export const About = () => {
           </Row>
           <Row>
             <Col md={{ size: "10", offset: 1 }}>
-              <p className="about-description-font-size">
+              <p className="about-description">
                 Je souhaite construire en équipe des applications ayant un
                 impact positif et direct sur l’expérience de ses utilisateurs.
               </p>

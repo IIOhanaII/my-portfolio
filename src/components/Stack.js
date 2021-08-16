@@ -7,17 +7,17 @@ import { SiTypescript } from "react-icons/si";
 
 export const Stack = () => {
   return (
-    <div className="component stack-component">
-      <div className="white-edges-component stack-component d-flex flex-column justify-content-center">
+    <div className="component">
+      <div className="smaller-component smaller-component--stack d-flex flex-column justify-content-center">
         <h3 className="text-light text-center mb-5">Ma Stack</h3>
-        <Container className="stacks-vertical-alignment">
+        <Container className="stacks-container">
           <Row>
             <Col md={{ size: "2", offset: 2 }} className="stack-container">
               <FontAwesomeIcon
                 icon={["fab", "html5"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
             <Col md="2" className="stack-container">
@@ -25,7 +25,7 @@ export const Stack = () => {
                 icon={["fab", "css3"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
             <Col md="2" className="stack-container me-3 me-lg-0">
@@ -33,7 +33,7 @@ export const Stack = () => {
                 icon={["fab", "sass"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
             <Col md="3" className="stack-container">
@@ -41,7 +41,7 @@ export const Stack = () => {
                 icon={["fab", "bootstrap"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
           </Row>
@@ -54,7 +54,7 @@ export const Stack = () => {
                 icon={["fab", "js"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
             <Col md="2" className="stack-container align-self-end">
@@ -63,18 +63,18 @@ export const Stack = () => {
                   color: "#fb8500",
                   size: "5.25rem",
                   style: { verticalAlign: "-0.125rem" },
-                  className: "stack-icon-resizing-ts",
+                  className: "stack-icon--ts",
                 }}
               >
                 <SiTypescript />
               </IconContext.Provider>
             </Col>
-            <Col md="4" className="stack-container react-icon-alignment">
+            <Col md="4" className="stack-container stack-icon--react">
               <FontAwesomeIcon
                 icon={["fab", "react"]}
                 size="6x"
                 color="#fb8500"
-                className="stacks-icons-resizing"
+                className="stack-icon"
               />
             </Col>
           </Row>

@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.white-edges-component {
+.smaller-component {
   position: absolute;
   width: 95%;
   height: 90%;
@@ -14,20 +14,20 @@
   transform: translate(-50%, -50%);
 }
 
-.stack-component {
+.smaller-component--stack {
   font-family: "Roboto";
   background-color: #219ebc;
 }
 
-.portfolio-component {
+.smaller-component--portfolio {
   font-family: "Roboto";
   background-color: #fb8500;
 }
 
-.about-component {
+.smaller-component--about {
   background-color: #023047;
 }
 
-.contact-component {
+.smaller-component--contact {
   background-color: #219ebc;
 }
